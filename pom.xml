@@ -44,11 +44,6 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>pe.caja.tracking</groupId>
-			<artifactId>Tracking</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<build>

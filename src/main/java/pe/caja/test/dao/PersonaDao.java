@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import pe.caja.bean.PersonaBean;
-import pe.caja.jdbc.ConexionMysql;
+import pe.caja.test.bean.PersonaBean;
+import pe.caja.test.jdbc.ConexionMysql;
 
 public class PersonaDao {
 	private String sql="SELECT * FROM Persons";

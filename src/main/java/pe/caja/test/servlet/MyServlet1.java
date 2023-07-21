@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pe.caja.bean.PersonaBean;
-import pe.caja.servicio.PersonaServicio;
+import pe.caja.test.bean.PersonaBean;
+import pe.caja.test.servicio.PersonaServicio;
 
 @WebServlet("/login")
 public class MyServlet1 extends HttpServlet {

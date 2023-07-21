@@ -3,8 +3,7 @@ package pe.caja.test.bean;
 import java.sql.SQLException;
 import java.util.List;
 
-import pe.caja.bean.PersonaBean;
-import pe.caja.consultas.PersonaConsulta;
+
 import pe.caja.test.dao.PersonaDao;
 
 public class Main {

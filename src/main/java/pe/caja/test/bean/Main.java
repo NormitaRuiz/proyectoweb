@@ -17,15 +17,15 @@ public class Main {
 			
 			for(int i=0; i<listadorecepcion.size(); i++) {
 				PersonaBean person=listadorecepcion.get(i);
-				System.out.println("El nombre y la ciudad es: "+person.getFirstName()+person.getCity());
+				System.out.println("El nombre y la ciudad es: "+person.getPersonID()+ ", "+person.getFirstName()+" , "+person.getCity()+" , " +person.getSexo());
 				
 			}
 			
 			System.out.println("*************************************************************************");
-			for (PersonaBean personaBean : listadorecepcion) {
-				
-				System.out.println("El nombre y la ciudad es: "+personaBean.getFirstName()+personaBean.getCity());
-			}
+//			for (PersonaBean personaBean : listadorecepcion) {
+//
+//				System.out.println("El nombre y la ciudad es: " + personaBean.getFirstName() + personaBean.getCity());
+//			}
 
 		}
 

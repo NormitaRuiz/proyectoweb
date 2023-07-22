@@ -6,6 +6,7 @@ public class PersonaBean {
 	private String firstName;
 	private String address; 
 	private String city;
+	private String sexo;
 	
 	public int getPersonID() {
 		return personID;
@@ -37,5 +38,12 @@ public class PersonaBean {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	
 
 }

@@ -2,6 +2,7 @@ package pe.caja.test.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,14 +31,20 @@ public class MyServlet1 extends HttpServlet {
 			String lastName = request.getParameter("lastName");
 			String address = request.getParameter("address");
 			String city = request.getParameter("city");
+			String sexo=request.getParameter("sexo");
+			
 			personabean.setFirstName(firstName);
 			personabean.setLastName(lastName);
 			personabean.setPersonID(Integer.valueOf(personID));
 			personabean.setAddress(address);
 			personabean.setCity(city);
+			personabean.setSexo(sexo);
+			
+			
 			
 			PersonaServicio personaservicio=new PersonaServicio();
-			personaservicio.insertarPersona(personabean);
+			System.out.println(sexo);
+		    personaservicio.insertarPersona(personabean);
 			
 			pwriter.print("Hola:"+personabean.getFirstName());
 			pwriter.print(" Tu apellido es: "+personabean.getLastName());
@@ -53,6 +60,33 @@ public class MyServlet1 extends HttpServlet {
 			System.out.println(exp);
 			}
 	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		PersonaBean personabean=new PersonaBean();
+		PrintWriter pwriter = response.getWriter();
+		String personID = request.getParameter("codigoId");
+		personabean.setPersonID(Integer.valueOf(personID));
+		
+		PersonaServicio personaservicio=new PersonaServicio();
+		try {
+			personaservicio.eliminarPersona(personabean);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
 	}
 	
 	
